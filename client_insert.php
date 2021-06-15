@@ -34,7 +34,7 @@ div.grp {
         $dbpass = '1234';
         $host = 'localhost';
         $port = '5432';
-        $dbname='Assessment_center';
+        $dbname='assessment_centre';
         $pdo = new PDO("pgsql:host=$host;dbname=$dbname", $dbuser, $dbpass);
         $pdo->prepare("INSERT INTO client VALUES (?, ?, ?, ?)")->execute([$_POST['registr_client_numb'], $_POST['name'], $_POST['phone'], $_POST['passport']]);
         $stml = $pdo->prepare('SELECT * from client where registr_client_numb = ?');
