@@ -78,7 +78,7 @@
         $dbpass = '1234';
         $host = 'localhost';
         $port = '5432';
-        $dbname='Assessment_center';
+        $dbname='assessment_centre';
         $pdo = new PDO("pgsql:host=$host;dbname=$dbname", $dbuser, $dbpass);
         $stml = $pdo->query('SELECT * from client where registr_client_numb = '.$_GET['registr_client_numb']);
         $row = $stml->fetch();
