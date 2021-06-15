@@ -69,7 +69,7 @@ $dbuser = 'postgres';
 $dbpass = '1234';
 $host = 'localhost';
 $port = '5432';
-$dbname='Assessment_center';
+$dbname='assessment_centre';
 $pdo = new PDO("pgsql:host=$host;dbname=$dbname", $dbuser, $dbpass);
 if(isset($_GET['search'])){
     $sql = "SELECT * from client where registr_client_numb::text like '%".$_GET['search']."%' or name like '%".$_GET['search']."%' or phone::text like  '%".$_GET['search']."%' or passport::text like '%".$_GET['search']."%'";
