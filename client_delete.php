@@ -36,7 +36,7 @@ div.grp {
         $dbpass = '1234';
         $host = 'localhost';
         $port = '5432';
-        $dbname='Assessment_center';
+        $dbname='assessmnet_centre';
         $pdo = new PDO("pgsql:host=$host;dbname=$dbname", $dbuser, $dbpass);
         try{
         $pdo->prepare("DELETE FROM client WHERE registr_client_numb='".$_GET['registr_client_numb']."'")->execute();
